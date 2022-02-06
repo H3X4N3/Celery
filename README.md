@@ -5,9 +5,9 @@ CELERY DISCORD INVITE: <br>
 
 https://discord.gg/nXu4FENMPj<br>
 
-<br>
+
 # Functions / Documentation<br>
-<br>
+
 
 I. Miscellaneous<br>
 II. IO<br>
@@ -15,9 +15,9 @@ III. Drawing Library<br>
 IV. Debug Library<br>
 V. Raknet/"rnet"<br>
 
-<br>
+
 # I. Miscellaneous Functions<br>
-<br>
+
 
 `String identifyexecutor()`
 Returns a string to identify what executor is being used. In this case, it's "Celery". Example:<br>
@@ -144,17 +144,17 @@ Self-explanatory IO functions which are supported:
 `void releasekey()`
 
 
-<br>
+
 # III. Drawing Functions<br>
-<br>
+
 
 `Instance Drawing.new(String classname)` --> Creates a new drawing object. Supported types:
 `text`, `line`, `triangle`, `square`, `circle`, `quad`
 
 
-<br>
+
 # IV. Debug Functions<br>
-<br>
+
 
 `Variant debug.getconstant(Function f, Int32 index)` --> Returns the constant at `index` from the function `f`'s constants
 
@@ -205,9 +205,9 @@ Synapse claims that there's an ACE vulnerability but they won't provide any evid
 Disclaimer #2:<br>
 Use obfuscated scripts at your own risk, since any obfuscated script can destroy your PC at any given time, and even synapse cannot fully prevent this. Use obfuscated scripts only if they're from a TRUSTED source. I will not take responsibility for it<br>
 
-<br>
+
 # V. rnet (Raknet) API<br>
-<br>
+
 
 `void rnet.sendposition(Vector3 value)` --> Tells the server to locate your character at the position `value`
 

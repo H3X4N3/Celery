@@ -254,7 +254,7 @@ game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool);
 
 local t = {0};
 while not (t[1] == 0x83 and t[2] == 3 and t[3] == 1) do
-    t = rnet.getpacket(); -- automatically wait()'s
+    t = rnet.getpacket(); -- automatically suspends/waits
 end
 
 local equip_packet = "";

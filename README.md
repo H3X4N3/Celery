@@ -26,14 +26,12 @@ end
 
 # II. IO Functions<br>
 
-```lua
-readfile(String filepath)
-```
+`readfile(String filepath)`
+
 Returns the contents of the file as a string. This also works with binary files.<br>
 
-```lua
-writefile(String filepath, String content)
-```
+`writefile(String filepath, String content)`
+
 Writes the content (only a string is accepted) to the file located at filepath<br>
 
 

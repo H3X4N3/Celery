@@ -241,9 +241,37 @@ packetViewer:disconnect();
 
 `void rnet.sendraw(String|Table value)` --> Sends a packet to the ROBLOX network, either by a hex-formatted String or a Table of bytes.
 
+Here's an example which can be used in Fencing, which gets the packet for equipping your tool.<br>
+It then replays this packet, after the tool has been unequipped:
 
+```lua
+toolname = "Foil"
+tool = game.Players.LocalPlayer.Backpack[toolname];
 
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools();
+wait(.1);
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool);
 
+local t = {0};
+while not (t[1] == 0x83 and t[2] == 3 and t[3] == 1) do
+    t = rnet.getpacket(); -- automatically wait()'s
+end
+
+local equip_packet = "";
+for _,v in pairs(t) do
+    equip_packet = equip_packet .. string.format("%02X ", v);
+end
+print("Equip tool packet: ", equip_packet);
+setclipboard(equip_packet);
+
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools();
+wait(1);
+rnet.sendraw(equip_packet);
+```
+
+If you look at this from another roblox client joined in the same server, you will see that the foil is not being
+held properly.
+This is because another packet is expected to make your character's arm actually hold the tool.
 
 
 

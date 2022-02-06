@@ -5,7 +5,9 @@ CELERY DISCORD INVITE: <br>
 
 https://discord.gg/nXu4FENMPj<br>
 
+<br>
 # Functions / Documentation<br>
+<br>
 
 I. Miscellaneous<br>
 II. IO<br>
@@ -13,7 +15,9 @@ III. Drawing Library<br>
 IV. Debug Library<br>
 V. Raknet/"rnet"<br>
 
+<br>
 # I. Miscellaneous Functions<br>
+<br>
 
 `String identifyexecutor()`
 Returns a string to identify what executor is being used. In this case, it's "Celery". Example:<br>
@@ -140,51 +144,70 @@ Self-explanatory IO functions which are supported:
 `void releasekey()`
 
 
-
+<br>
 # III. Drawing Functions<br>
-
+<br>
 
 `Instance Drawing.new(String classname)` --> Creates a new drawing object. Supported types:
 `text`, `line`, `triangle`, `square`, `circle`, `quad`
 
 
-
+<br>
 # IV. Debug Functions<br>
-
+<br>
 
 `Variant debug.getconstant(Function f, Int32 index)` --> Returns the constant at `index` from the function `f`'s constants
+
 `Function debug.getproto(Function f, Int32 index)` --> Returns the proto at `index` from the function `f`'s protos
+
 `Int32 debug.getcode(Function f, Int32 index)` --> Returns the instruction at `index` from function `f`'s code
+
 `Variant debug.getstack(Int32 index)` --> Returns the element at `index` from the current function's stack.
+
 `Variant debug.getupvalue(Function f, Int32 index)` --> Returns the upvalue at `index` from the function `f`'s upvalues
+
 `Table debug.getconstants(Function f)` --> Returns the constants used in function `f`
+
 `Table debug.getprotos(Function f)` --> Returns the protos used in function `f`
+
 `Table debug.getcode(Function f)` --> Returns the instructions in function `f`'s code
+
 `Table debug.getstack()` --> Returns all elements in the current thread's stack
+
 `Table debug.getupvalues(Function f)` --> Returns the upvalues in the function `f`
 
+
 `void debug.setconstants(Function f, Table constants)` --> Sets the constants used in function `f` to the table `constants`
+
 `void debug.setprotos(Function f, Table protos)` --> Sets the protos used in function `f` to the table `protos`
+
 `void debug.setcode(Function f, Table code)` --> Set the instructions in function `f` to `code` (Disabled unless you are in experimental mode)
+
 `void debug.setstack(Table stack)` --> Sets the current thread's stack to `stack`
+
 `void debug.setupvalues(Function f, Table upvalues)` --> Sets the upvalues in the function `f` to `upvalues`
+
 `void debug.setconstant(Function f, Int32 index, Variant constant)` --> Sets the constant at `index` from function `f` to `constant`
+
 `void debug.setproto(Function f, Int32 index, Function proto)` --> Sets the proto at `index` from the function `f`'s protos to `proto`
+
 `void debug.setcode(Function f, Int32 index, Int32 instruction)` --> Sets the instruction at `index` from function `f`'s code to `instruction`
+
 `void debug.setstack(Int32 index, Variant value)` --> Sets the element at `index` from the current function's stack to `value`
+
 `void debug.setupvalue(Function f, Int32 index, Variant value)` --> Sets the upvalue at `index` from the function `f`'s upvalues to `value`
 
 
+<br>
 Disclaimer #1:<br>
 Synapse claims that there's an ACE vulnerability but they won't provide any evidence of what was involved to actually execute shell-code. The possibility of such a thing happening, when you have the needed sanitzation checks, would rely on external means or another custom function that is apparently flawed. Until this _other_ function is uncovered, and the actual cause of the ACE is known, I will not remove my debug library.<br>
-
+<br>
 Disclaimer #2:<br>
 Use obfuscated scripts at your own risk, since any obfuscated script can destroy your PC at any given time. Even if it's run on synapse. Use obfuscated scripts only if they're from a TRUSTED source. I will not take responsibility for this<br>
 
-
-
-# V. rnet (Raknet) API
-
+<br>
+# V. rnet (Raknet) API<br>
+<br>
 
 `void rnet.sendposition(Vector3 value)` --> Tells the server to locate your character at the position `value`
 

@@ -9,9 +9,9 @@ https://discord.gg/nXu4FENMPj
 
 identifyexecutor
 Returns a string to identify what executor is being used. In this case, it's "Celery"
-[code]
+```lua
 if ({pcall(identifyexecutor)})[2] == "Celery" then
     print'Using Celery'
 end
-[/code]
+```
 

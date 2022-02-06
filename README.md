@@ -200,10 +200,10 @@ Self-explanatory IO functions which are supported:
 
 <br>
 Disclaimer #1:<br>
-Synapse claims that there's an ACE vulnerability but they won't provide any evidence of what was involved to actually execute shell-code. The possibility of such a thing happening, when you have the needed sanitzation checks, would rely on external means or another custom function that is apparently flawed. Until this _other_ function is uncovered, and the actual cause of the ACE is known, I will not remove my debug library.<br>
+Synapse claims that there's an ACE vulnerability but they won't provide any evidence of what was involved to actually execute shell-code. The possibility of such a thing happening, when you have more than usual sanitization checks, would rely on external means or another custom function that is apparently flawed. Until this _other_ function is uncovered and the ACE is actually proven not by some staged video, the actual cause of the ACE is unknown, and I will not remove my debug library<br>
 <br>
 Disclaimer #2:<br>
-Use obfuscated scripts at your own risk, since any obfuscated script can destroy your PC at any given time. Even if it's run on synapse. Use obfuscated scripts only if they're from a TRUSTED source. I will not take responsibility for this<br>
+Use obfuscated scripts at your own risk, since any obfuscated script can destroy your PC at any given time, and even synapse cannot fully prevent this. Use obfuscated scripts only if they're from a TRUSTED source. I will not take responsibility for it<br>
 
 <br>
 # V. rnet (Raknet) API<br>

@@ -224,12 +224,11 @@ Use obfuscated scripts at your own risk, since any obfuscated script can destroy
 `Signal rnet.Capture` --> This event allows you to view/log packets yourself, to display them however you want. Here is an example of its usage:
 ```lua
 local packetViewer = rnet.Capture:Connect(function(packet)
-    print("Sent packet:")
     local str = "";
     for _,v in pairs(packet.data) do
         str = str .. string.format("%02X ", v);
     end
-    print("Sending packet. ID: " .. string.format("%02X", packet.id) .. ". Full packet:");
+    print("Sending packet... ID: " .. string.format("%02X", packet.id) .. ". Full packet:");
     print(str);
     print("\n");
 end)

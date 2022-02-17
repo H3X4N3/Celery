@@ -253,4 +253,6 @@ function lib.prompt(title, description, closeTime)
 	prompt(title, description, closeTime)
 end
 
-return lib
+Lib.prompt('Celery Loaded', 'Thanks for using Celery :)', 2)
+
+--[[return lib]]

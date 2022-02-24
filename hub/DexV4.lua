@@ -2280,7 +2280,9 @@ end
 function f.addObject(obj,noupdate,recurse)
 	ypcall(function()
 		local access = obj.Changed
+		print("adding object: ", obj.Name);
 		if not nodes[obj.Parent] then return end
+		print("node for object parent is nil", obj.Parent);
 		local newNode = {
 			Obj = obj,
 			Parent = nodes[obj.Parent],
@@ -2291,6 +2293,8 @@ function f.addObject(obj,noupdate,recurse)
 		}
 		if newNode.ExplorerOrder <= 0 and not obj:IsA("Workspace") and obj.Parent == game then newNode.ExplorerOrder = 999 end
 		nodes[obj] = newNode
+		print("set nodes["..obj.Name.."] to the new node");
+		
 		newNode.Parent.Sorted = nil
 		table.insert(newNode.Parent,newNode)
 		
@@ -2395,7 +2399,10 @@ function f.removeObject(obj,noupdate,recurse)
 end
 
 function f.indexNodes(obj)
-	if not nodes[game] then nodes[game] = {Obj = game,Parent = nil} end
+	if not nodes[game] then 
+		nodes[game] = {Obj = game,Parent = nil}
+	end
+	print("nodes[game]: ", nodes[game]);
 	
 	local addObject = f.addObject
 	local removeObject = f.removeObject
@@ -3420,6 +3427,9 @@ propertiesTree.Expanded["CAT:Surface Inputs"] = false
 propertiesTree.Expanded["CAT:Surface"] = false
 
 welcomePlayer()
+
+warn("nodes[game]: ",nodes[game]);
+warn("nodes[workspace]: ",nodes[workspace]);
 
 for i,v in pairs(nodes[workspace]) do
 	print(type(i))

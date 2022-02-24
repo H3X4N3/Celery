@@ -1,2 +1,2 @@
 rbxversion=b2821aeb52fd4448
-celeryversion=0.1.029
+celeryversion=0.1.030

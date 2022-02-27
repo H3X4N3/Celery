@@ -272,7 +272,7 @@ rnet.sendraw(equip_packet);
 ```
 
 If you look at this from another roblox client joined in the same server, you will see that the foil is not being
-held properly.
+held properly but it is equipped, in your hand now!
 This is because another packet is expected to make your character's arm actually hold the tool.
 
 

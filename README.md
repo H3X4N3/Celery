@@ -252,10 +252,12 @@ game.Players.LocalPlayer.Character.Humanoid:UnequipTools();
 wait(.1);
 game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool);
 
-local t = {0};
-while not (t[1] == 0x83 and t[2] == 3 and t[3] == 1) do
-    t = rnet.getpacket(); -- automatically suspends/waits
+local packet = rnet.getpacket()
+while not (packet.bytes[1] == 0x83 and packet.bytes[2] == 0x03) do
+    packet = rnet.getpacket(); -- automatically suspends/waits
 end
+
+local t = packet.bytes;
 
 local equip_packet = "";
 for _,v in pairs(t) do

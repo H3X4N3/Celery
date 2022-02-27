@@ -201,8 +201,10 @@ Self-explanatory IO functions which are supported:
 <br>
 Disclaimer:<br>
 
-Debug functions have always been a massive security flaw. The ACE vuln doesn't surprise me but Synapse fails to point out that its only possible through exterior intervention. The debug functions themselves are NOT the actual risk. I will probably bring them back another time.<br>
-Use obfuscated scripts at your own risk, since any obfuscated script can destroy your PC at any given time, even on other exploits (synapse, etc.) regardless of how hard they try to prevent it. Use obfuscated scripts only if they're from a TRUSTED source.<br>
+Debug functions have always been a massive security flaw. The ACE vuln doesn't surprise me but Synapse fails to point out that its only possible through exterior intervention. The debug functions themselves are NOT the actual risk. I will probably bring them back sooner or later.<br>
+The REAL issue is this:<br>
+
+Use obfuscated scripts at your OWN risk, since any obfuscated script can destroy your PC at any given time, on every exploit, regardless of how hard they try to prevent it. Use obfuscated scripts only if they're from a TRUSTED source.<br>
 
 
 # V. rnet (Raknet) API<br>

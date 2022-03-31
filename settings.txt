@@ -1,3 +1,3 @@
-rbxversion=12605f3636bb47e7
+rbxversion=44af1822dccd494d
 celeryversion=0.1.036
 obsolete=0
